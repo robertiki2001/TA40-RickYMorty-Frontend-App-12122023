@@ -1,0 +1,8 @@
+<div *ngIf="characters?.characters; else espera" class="mt-3 d-flex flex-row flex-wrap justify-content-center">
+    <div *ngFor="let character of characters.characters" class="col-2 d-flex flex-column m-5">
+      <img src="{{character.image}}" alt="{{character.name}}">
+      <p class="mt-3 ms-4">{{character.name}}</p>
+      <button class="btn btn-warning mx-5">See more</button>
+    </div>
+  </div>
+  <ng-template #espera>Waiting results...</ng-template>
